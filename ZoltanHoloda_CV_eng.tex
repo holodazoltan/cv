@@ -1,21 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
+% Developer CV
 % LaTeX Template
-% Version 1.1 (9/12/12)
+% Version 1.0 (28/1/19)
 %
-% This template has been downloaded from:
+% This template originates from:
 % http://www.LaTeXTemplates.com
 %
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
+% Authors:
+% Jan Vorisek (jan@vorisek.me)
+% Based on a template by Jan Küster (info@jankuester.com)
+% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
 %
 % License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
+% The MIT License (see included LICENSE file)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -23,169 +20,157 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
-
-\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
-\usepackage[scale=0.75]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
-%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
-
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
-
-\firstname{Zoltán} % Your first name
-\familyname{Holoda} % Your last name
-
-% All information in this block is optional, comment out any lines you don't need
-\title{Curriculum Vitae}
-\address{1082, Budapest}{Leonardo da Vinci utca 17/A 4/1}
-\mobile{(+36) 70-77-66-703}
-\email{zoltan.holoda@gmail.com}
-\photo[70pt][0.4pt]{ZoltanHoloda} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-\quote{"Ad astra per asperas"}
-\extrainfo{16th october 1983, Hungarian}
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\makecvtitle % Print the CV title
-
 %----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
+%	TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\section{Experience}
+\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	% If your name is very short, use just one of the lines below
+	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Zoltán}}}}} % First name
+	
+	\colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Holoda}}}}} % Last name
+	
+	\vspace{6pt}
+	
+	{\huge Senior Back-end Developer} % Career or current job title
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{MapMarker}{12}{1082, Budapest}\\
+	\icon{Phone}{12}{+36-70-77-66-703}\\
+	\icon{At}{12}{\href{mailto:zoltan.holoda@gmail.com}{zoltan.holoda@gmail.com}}\\	
 
-\subsection{Vocational}
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+	\icon{QuoteRight}{12}{Ad astra per asperas}\\
+	\icon{Github}{12}{\href{https://github.com/holodazoltan}{github.com/holodazoltan}}\\
+	\icon{Twitter}{12}{\href{https://twitter.com/@zoltanholoda}{@zoltanholoda}}\\
+\end{minipage}
 
-\cventry{2018--2020}{Senior Back-end develper}{\textsc{Code and Soda}}{Budapest}{}{Developed custom java based web e-commercial software backend, create new machine learning based recommenders.}
-
-%------------------------------------------------
-
-\cventry{2015--2018}{Senior Back-end develper}{\textsc{EU Edge}}{Budapest}{}{Developed custom java based web e-commercial software backend.}
-
-%------------------------------------------------
-
-\cventry{2014--2015}{Junior Back-end develper}{\textsc{Atoll Technologies}}{Budapest}{}{Developed Java based speedcams software VEDA to store and manage driver's misdemeanor.}
-
-%------------------------------------------------
-
-\cventry{2009--2014}{Junior Back-end developer}{\textsc{Ericsson}}{Budapest}{}{Developed java based O\&M software to manage radio and core network (software, hadware, license management).}
-
-%------------------------------------------------
-
-\cventry{2007--2009}{Windows and Linux server administrator}{\textsc{Hungarian Universtiy of Fine Arts}}{Budapest}{}{}
-
-%------------------------------------------------
-
-\cventry{2005--2009}{Hosting Operator}{\textsc{T-online}}{Budapest}{}{}
-
-%----------------------------------------------------------------------------------------
-%	PROJECT SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Project}
-
-\cvitem{2013 01-03.}{\textsc{Ericsson - OSS-SHM Onsite transfer project to Hyderabad, India}, Transfering project and general knowledge to TCS in Hyderabad.}
-
-%----------------------------------------------------------------------------------------
-%	COURSES SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Courses}
-
-\cvitem{2012}{Oracle - Developing Applications for the Java EE 6 Platform (FJ-310-EE6)}
-\cvitem{2013}{Oracle - Developing Web Services Using Java Technology (DWS-4050-EE6)}
-\cvitem{2013}{Oracle - Developing Secure Java Web Services (DWS-4120-EE6)}
-\cvitem{2013}{Mark Summers Agile Coach - User Story Workshop}
+\vspace{0.5cm}
 
 %----------------------------------------------------------------------------------------
-%	CERTIFICATE SECTION
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
 
-\section{Certificate}
+\cvsect{Who Am I?}
 
-\cvitem{2009}{\textsc{ExxonMobil - Introduction to SAP training}, Technical and business knowledge of SAP.}
+\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	I am a professional Java programmer more than 10 years. I am hard-worker, enthustistics, motivated, precise co-worker, who likes the be a part of a team. At the bigger company I like the athmosphere and easy to find the right people to learn from. At smaller company I like bigger responsibility and challenges.
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	\begin{barchart}{5.5}
+		\baritem{Java}{100}
+		\baritem{JEE}{90}
+		\baritem{Python}{65}
+		\baritem{Bash}{60}
+	\end{barchart}
+\end{minipage}
 
-\section{Education}
-
-\cventry{2006--2011}{Bachelor of Arts}{Budapest University of Technology and Economics}{Budapest}{}{}
-\cvitem{Faculty}{\emph{Management and Business Administration}}
-\cvitem{Speciality}{\emph{Enterprise resource planning}}
-\cvitem{Masters Thesis}{\emph{ONE introduction at Ericsson Hungary}}
-
-\cventry{2002--2009}{Master's degree}{Budapest University of Technology and Economics}{Budapest}{}{}  % Arguments not required can be left empty
-\cvitem{Faculty}{\emph{Electrical Engineering and Informatics}}
-\cvitem{Speciality}{\emph{Internet and Infocommunication appliances}}
-\cvitem{Masters Thesis}{\emph{Analysis of binary encoding fault-tolerant quantum network}}
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Computer skills}
-
-\cvitem{Language}{Java, Python, Bash, Javascript}
-\cvitem{Methodology}{TDD, BDD, XP, Kanban, Scrum}
-\cvitem{CVS}{Subversion, Git, Mercurial, Clearcase}
-\cvitem{DevOps}{Docker, Jenkins, Ant, Maven, Gradle, JMeter, JProfiler}
-\cvitem{Server}{Glassfish, Weblogic, Nginx, Tomcat, Jetty}
-\cvitem{Database}{OracleDB, MySQL, Sybase, MongoDB, Elasticsearch}
-\cvitem{Technology}{Spring, JEE, GWT, Vaadin, JMS, REST, SOAP, JPA, JAXB, EJB, JSP, TestNG, JUnit, Mockito}
-\cvitem{Other}{\LaTeX, XML, JSON, HTML, Template, UML}
+\begin{center}
+	\bubbles{6/Spring, 5/Tomcat, 4/OracleDB, 6/Git, 5/Docker}
+\end{center}
 
 %----------------------------------------------------------------------------------------
-%	LANGUAGES SECTION
+%	EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\section{Languages}
+\cvsect{Experience}
 
-\cvitemwithcomment{Hungarian}{Mothertongue}{}
-\cvitemwithcomment{English}{Intermediate}{Professional working proficiency}
-\cvitemwithcomment{German}{Intermediate}{Limited working proficiency}
+\begin{entrylist}
+	\entry
+		{2018 -- 2020}
+		{Senoir Back-end developer}
+		{Code and Soda}
+		{Developed custom java based web e-commercial software backend, create new machine learning based recommenders.\\ \texttt{Java-Spring}\slashsep\texttt{e-commerce}\slashsep\texttt{Machine Learning}}
+	\entry
+		{2015 -- 2018}
+        {Senoir Back-end developer}
+        {EU Edge}
+        {Developed custom java based web e-commercial software backend.\\ \texttt{Java-JEE}\slashsep\texttt{e-commerce}}
+	\entry
+		{2014 -- 2015}
+		{Junior Back-end developer}
+		{Atoll Technology}
+		{Developed Java based speedcams software VEDA to store and manage driver's misdemeanor.\\ 
+		\texttt{Java-JEE}\slashsep\texttt{OracleDB}}
+	\entry
+        {2009 -- 2014}
+        {Junior Back-end developer}
+        {Ericsson Hungary}
+        {Developed java based O\&M software to manage radio and core network (software, hadware, license management).\\ 
+    	\texttt{Java-JEE}\slashsep\texttt{Scumm}}
+\end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
+%	EDUCATION
 %----------------------------------------------------------------------------------------
 
-\section{Interests}
+\cvsect{Education}
 
-\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
-
-\cvlistdoubleitem{Soccer}{Tennis}
-\cvlistdoubleitem{Skiing}{Cycling}
-\cvlistdoubleitem{Retrogaming}{Literature}
-\cvlistitem{Other national's culture}
+\begin{entrylist}
+	\entry
+    	{2006 -- 2011}
+	    {Bachelor of Arts}
+    	{Budapest University of Technology and Economics}
+    	{I studied at Management and Business Administration Faculty with Enterprise resource planning Speciality. The title of my Masters Thesis is ONE introduction at Ericsson Hungary.}
+	\entry
+		{2002 -- 2009}
+		{Master's Degree}
+		{Budapest University of Technology and Economics}
+		{I studied at Electrical Engineering and Informatics Faculty with Internet and Infocommunication appliances Speciality. The title of my Masters Thesis is Analysis of binary encoding fault-tolerant quantum network.}
+\end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	COVER LETTER
+%	ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-% To remove the cover letter, comment out this entire block
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
 
-%\clearpage
-
-%\recipient{HR Departmnet}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-%\date{\today} % Letter date
-%\opening{Dear Sir or Madam,} % Opening greeting
-%\closing{Sincerely yours,} % Closing phrase
-%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-
-%\makelettertitle % Print letter title
-
-%\lipsum[1-3] % Dummy text
-
-%\makeletterclosing % Print letter signature
+	\cvsect{Languages}
+	
+	\textbf{Hungarian} - native\\
+	\textbf{Engish} - proficient\\
+	\textbf{German} - rudimentary
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	\cvsect{Hobbies}
+	
+	I like to walk in the forest with my family and friends, playing soccer, tennis, skiing and cycling. If I have same spare time, I grab a book.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	\cvsect{Non profit}
+	
+	I always charity to noble cases like education or environment. Besides, I help to collect waste or help out a friend with fixing an IT issue.
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 
